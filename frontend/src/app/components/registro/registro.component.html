@@ -1,0 +1,175 @@
+<div id="header">
+  <img class="logo" src="../../../assets/img/logo.png" routerLink="/home">
+</div>
+
+<nav>
+  <ul class="nav__links">
+    <li class="nom">
+      <p routerLink="/home">CocoBakery</p>
+    </li>
+    <li><a href="#" routerLink="/user/sign-in">Sign-in</a></li>
+    <li><a href="#" routerLink="/user/registro">Registrarse</a></li>
+
+  </ul>
+</nav>
+
+
+
+
+<div class="container" data-spy="scroll" data-target="#header" data-offset="0">
+  <div class="row">
+    <div class="col-md-4  registroBox">
+        <div >
+            <h1>Registro</h1>
+            <form #usuarioForm="ngForm" [formGroup]="contactForm" (ngSubmit)="addUsuario(usuarioForm)">
+              <input type="hidden" name="_id">
+              <p>Nombres</p>
+              <input type="text" name="name" formControlName="name" autocomplete="off" placeholder="Nombres">
+              <div class="alert-danger" *ngIf="name.invalid && name.touched">
+                  <div class="container-error-message" *ngIf="name.errors.required">
+                    el nombre es requerido
+                  </div>
+                  <div class="container-error-message" *ngIf="name.errors.minlength">
+                    el correo debe tener minimo 3 caracteres
+                  </div>
+              </div>
+        
+              <p>Apellidos</p>
+              <input type="text" name="apellido" formControlName="apellido" autocomplete="off" placeholder="Apellidos">
+              <div class="alert-danger" *ngIf="apellido.invalid && apellido.touched">
+                  <div class="container-error-message" *ngIf="apellido.errors.required">
+                    el apellido es requerido
+                  </div>
+                  <div class="container-error-message" *ngIf="apellido.errors.minlength">
+                      el apellido debe tener minimo 3 caracteres
+                  </div>
+              </div>
+              <p>Numero de identificacion</p>
+              <input type="text" name="id" formControlName="identificacion" autocomplete="off" placeholder="identificacion">
+              <div class="alert-danger" *ngIf="identificacion.invalid && identificacion.touched">
+                  <div class="container-error-message" *ngIf="identificacion.errors.required">
+                    la identificacion es requerida
+                  </div>
+                  <div class="container-error-message" *ngIf="identificacion.errors.minlength">
+                      el correo debe tener minimo 6 caracteres
+                  </div>
+                  <div class="container-error-message" *ngIf="identificacion.touched && identificacion.invalid &&  identificacion.errors.pattern">
+                   ingrese solo caracteres numericos
+                  </div>
+              </div>
+        
+              <p>Email</p>
+              <input type="text" name="correo" formControlName="correo" autocomplete="off" placeholder="exemplo@algo.com">
+              <div class="alert-danger" *ngIf="correo.invalid && correo.touched">
+                <div class="container-error-message" *ngIf="correo.errors.required">
+                  el Email es requerido
+                </div>
+                <div class="container-error-message" *ngIf="correo.touched && correo.invalid &&  correo.errors.pattern">
+                  el correo debe tener un fomato como "algo@correo.com"
+                </div>
+              </div>
+        
+              <p>Pais</p>
+              <input type="text" name="pais" formControlName="pais" autocomplete="off" placeholder="Pais">
+              <div class="alert-danger" *ngIf="pais.invalid && pais.touched">
+                  <div class="container-error-message" *ngIf="pais.errors.required">
+                    el pais es requerido
+                  </div>
+              </div>
+        
+              <p>Contraseña</p>
+              <input type="password" name="contrasena" formControlName="contrasena" autocomplete="off" placeholder="Contrasena">
+              <div class="alert-danger" *ngIf="contrasena.invalid && contrasena.touched">
+                  <div class="container-error-message" *ngIf="contrasena.errors.required">
+                    la Contraseña es requerida
+                  </div>
+                  <div class="container-error-message" *ngIf="contrasena.errors.minlength">
+                      la contraseña debe tener minimo 8 caracteres
+                    </div>
+      
+                  </div>
+        
+              <input type="submit" name="crear" value="Crear cuenta">
+              <input type="button" name="borrar" (click)="resetForm(usuarioForm)" value="borrar">
+        
+        
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+    
+
+
+<div class="registroActual" data-spy="scroll" data-target="#header" data-offset="1">
+  <div class="col s7">
+    <table class="striped highlight black-text">
+      <thead>
+        <th>Name</th>
+        <th>Apellido</th>
+        <th>id</th>
+        <th>Correo</th>
+        <th>Pais</th>
+        <th>contrasena</th>
+        <th>Operaciones</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarioService.usuarios">
+          <td>{{ usuario.name }}</td>
+          <td>{{ usuario.apellido }}</td>
+          <td>{{ usuario.identificacion }}</td>
+          <td>{{ usuario.correo }}</td>
+          <td>{{ usuario.pais }}</td>
+          <td>{{ usuario.password }}</td>
+          <td>
+            <a (click)="editUsuario(contactForm)">
+              <i class="material-icons">edit</i>
+            </a>
+            <a (click)="deleteUsuario(usuario._id, usuarioForm)">
+              <i class="material-icons">delete</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="fixed-bottom">
+  <div id="footer">
+    <div class="row">
+      <div class="col md-6">
+        <div class="container" id="conacto">
+          <br><br>
+          <h6>Tel: 52462456 <i class="material-icons left">call</i></h6>
+          <h6>Whatsapp: 31036564589 <i class="material-icons left">textsms</i></h6>
+          <h6>Direccion: Cll 56 #45-03 <i class="material-icons left">store</i></h6>
+          <h6>Mail: cocobakery@gmail.com <i class="material-icons left">mail_outline</i></h6>
+          <h6>Fax: 52462456320 ext 2</h6><br>
+        </div>
+      </div>
+      <div class="col md-6">
+        <div class="container">
+          <h5>Acerca de cocobakery</h5>
+          <p>COCOBAKERY es una reposteria con 10 años de esperiencia en la elaboración de pasteles para
+            ocaciones especiales,atenta siempre a los requerimientos de los clientes y habil para cumplir todo lo que
+            se imagine en un pastel.
+          </p><br>
+          <h6>©2019 Copyright esta pagina esta protegida por derechos de autor</h6>
+        </div>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <div class="container" id="follow">
+          <h5>Follow us</h5>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook "></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-vk"></i><br><br>
+          <input type="submit" value="contactenos" routerLink="/contactoform">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

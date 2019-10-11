@@ -1,0 +1,113 @@
+<nav class="fixed-top">
+  <div id="header">
+    <img class="logo" src="../../../assets/img/logo.png" routerLink="/home">
+  </div>
+  <ul class="nav__links">
+    <li class="nom">
+      <p routerLink="/home">CocoBakery</p>
+    </li>
+    <li><a href="#" routerLink="/user/sign-in">Sign-in</a></li>
+    <li><a href="#" routerLink="/user/registro">Registrarse</a></li>
+
+  </ul>
+</nav>
+
+
+
+<div id="baner" class="carousel" >
+  
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 pap" *ngFor="let producto of productos">
+
+      <div class="container" data-spy="scroll" data-target="#footer" data-offset="1">
+        <div class="row">
+          <div class="col-md-12 offset-md">
+            <div class="_blogCard mt-5 rounded pl-4 pr-4 pb-4 pt-2">
+              <div class="row">
+                <img src="{{producto.img}}" alt="" class="img-fluid" />
+                <div class="row">
+                  <div class="col-md-12 d-inline-flex align-items-center justify-content-between">
+                    <div class="_shareIcons align-self-end">
+                      <ul class="list-unstyled m-0 d-inline-flex">
+                        <li class="ml-1 mr-1"><a href="#"><i class="material-icons">visibility</i></a></li>
+                        <li class="ml-1 mr-1"><a href="#"><i class="material-icons">favorite_border</i></a></li>
+                        <li class="ml-1 mr-1"><a href="#"><i class="material-icons">share</i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="pb-2 mb-2 border-bottom">
+                      <div class="_blogTitle">{{producto.nombre}}</div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="card-reveal _content mt-2">
+                      {{producto.descripcion}}
+                    </div>
+                    <div class="_contentz mt-2">
+                      Ref: {{producto.codigo}}
+                    </div>
+                    <div class="_contentp mt-2">
+                      Precio: ${{producto.precio}}
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="_content mt-2">
+                      <input type="submit" value="comprar" class="comprar" routerLink="/compra"
+                        (click)="productop(producto._id)">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+
+<div class="fixed-bottom">
+  <div id="footer">
+    <div class="row">
+      <div class="col md-6">
+        <div class="container" id="conacto">
+          <br><br>
+          <h6>Tel: 52462456 <i class="material-icons left">call</i></h6>
+          <h6>Whatsapp: 31036564589 <i class="material-icons left">textsms</i></h6>
+          <h6>Direccion: Cll 56 #45-03 <i class="material-icons left">store</i></h6>
+          <h6>Mail: cocobakery@gmail.com <i class="material-icons left">mail_outline</i></h6>
+          <h6>Fax: 52462456320 ext 2</h6><br>
+        </div>
+      </div>
+      <div class="col md-6">
+        <div class="container">
+          <h5>Acerca de cocobakery</h5>
+          <p>COCOBAKERY es una reposteria con 10 años de esperiencia en la elaboración de pasteles para
+            ocaciones especiales,atenta siempre a los requerimientos de los clientes y habil para cumplir todo lo que
+            se imagine en un pastel.
+          </p><br>
+          <h6>©2019 Copyright esta pagina esta protegida por derechos de autor</h6>
+        </div>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <div class="container" id="follow">
+          <h5>Follow us</h5>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook "></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-vk"></i><br><br>
+          <input type="submit" value="contactenos" routerLink="/contactoform">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

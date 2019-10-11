@@ -1,0 +1,133 @@
+<div id="header">
+    <img class="logo" src="../../../assets/img/logo.png" routerLink="/home">
+</div>
+ 
+  <nav>
+    <ul class="nav__links">
+      <li class="nom"><p routerLink="/home">CocoBakery</p></li>
+      <li><a href="#" routerLink="/user/perfil">Perfil<i class="material-icons left">person_pin</i></a></li>
+      <li><a href="#" routerLink="/home">Sign-up </a></li>
+      
+      
+    </ul>
+  </nav>
+
+
+<div class="container">
+  <div class="row perfil">
+    <div class="col s6 push-s6 ">
+      <div class="row">
+        <div class="col s12  blue accent-1">
+          <h5>Registro de ventas</h5>
+        </div>
+        <div class="col s12 ">
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="col s6 pull-s6 ">
+      <div class="row">
+        <div class="col s9 push-s3 white">
+          <h5> Hola {{nombre}}!!!!</h5>
+        </div>
+        <div class="col s3 pull-s9 white">
+          <p>Nombre</p>
+
+        </div>
+      </div>
+
+      <div class="row registro">
+
+        <div id="infoUser" class="card">
+
+          <div class="card-content">
+
+
+            <form>
+              <p>Nombre</p>
+              <input type="text" name="name" disabled value="{{nombre}}">
+
+              <p>Apellidos</p>
+              <input type="text" name="apellido" disabled value="{{apellido}}">
+
+              <p>Id</p>
+              <input type="text" name="id" disabled value="{{identificacion}}">
+
+              <p>Email</p>
+              <input type="text" name="correo" disabled value="{{correo}}">
+
+              <p>Pais</p>
+              <input type="text" name="pais" disabled value="{{pais}}">
+
+
+
+              <input type="button" value="Actualizar informacion"> <i class="material-icons rigp">settings</i>
+
+
+              <div class="card-action">
+                <div class="row pli">
+                  <div class="input-field col s12">
+                    <input type="submit" value="guardar">
+                  </div>
+                </div>
+
+              </div>
+
+            </form>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+<div class="fixed-bottom">
+    <div id="footer">
+      <div class="row">
+        <div class="col md-6">
+          <div class="container" id="conacto">
+            <br><br>
+            <h6>Tel: 52462456 <i class="material-icons left">call</i></h6>
+            <h6>Whatsapp: 31036564589 <i class="material-icons left">textsms</i></h6>
+            <h6>Direccion: Cll 56 #45-03 <i class="material-icons left">store</i></h6>
+            <h6>Mail: cocobakery@gmail.com <i class="material-icons left">mail_outline</i></h6>
+            <h6>Fax: 52462456320 ext 2</h6><br>
+          </div>
+        </div>
+        <div class="col md-6">
+          <div class="container">
+            <h5>Acerca de cocobakery</h5>
+            <p>COCOBAKERY es una reposteria con 10 años de esperiencia en la elaboración de pasteles para
+              ocaciones especiales,atenta siempre a los requerimientos de los clientes y habil para cumplir todo lo que
+              se imagine en un pastel.
+            </p><br>
+            <h6>©2019 Copyright esta pagina esta protegida por derechos de autor</h6>
+          </div>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <div class="container" id="follow">
+            <h5>Follow us</h5>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook "></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-vk"></i><br><br>
+            <input type="submit" value="contactenos" routerLink="/contactoform">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

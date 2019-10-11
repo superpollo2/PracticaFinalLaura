@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap');
+
+.nom{
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 22px;
+}
+a,button{
+  
+  font-weight: 200;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#header{
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+
+
+}
+.logo{
+  width: 190px;
+  height: 150px;
+  position: absolute;
+  cursor: pointer;
+}
+
+nav{
+  Background:#FABADC;
+}
+.nav__links{
+  list-style: none;
+}
+.nav__links li a{
+  transition: all 0.1s ease 0s;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+#infoUser{
+  background: #FABADC;
+  color: #fff;
+  
+  position: absolute;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+}
+
+.card p {
+  margin:0;
+  padding: 0;
+  font-size: 15px;
+}
+
+.card input{
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+.card input[type="text"], input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline:none;
+  height: 40px;
+  color: #1a0012;
+  font-size: 15px;
+
+}
+
+.card input[type="submit"]{
+  border:none;
+  outline:none;
+  height: 35px;
+  background: #65d0f0;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 15px;
+
+}
+
+
+.card input[type="submit"]:hover{
+  cursor: pointer;
+  background: #37bee7;
+  color:#fff;
+
+}
+.card input[type="button"]{
+  border:none;
+  outline:none;
+  height: 35px;
+  background: #65d0f0;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 15px;
+
+}
+
+
+.card input[type="button"]:hover{
+  cursor: pointer;
+  background: #37bee7;
+  color:#fff;
+
+}
+.avatar{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position:absolute;
+  top:-90px;
+  left: calc(70% -50px);
+  background: #fff;
+}
+.infoUser h1 {
+  margin:0;
+  padding: 0 0 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#footer {
+  justify-content: space-between;;
+  left:0px;
+  bottom:0px;
+  padding-top:1%;
+  padding-left:12% ;
+  height: 220px;
+  width: 100%;
+
+  color:#fff;
+
+  background:#FABADC;
+}
+
+
+#footer input[type="submit"]{
+  border:none;
+  outline:none;
+  height: 35px;
+  width: 200px;
+  background: #65d0f0;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 15px;
+
+}
+#footer input[type="submit"]:hover{
+  cursor: pointer;
+  background: hsl(194, 79%, 56%);
+  color:#fff;
+
+}
+#follow{
+  padding-top: 7%;
+}
+
+#contacto{
+  padding-top: 5%;
+}
+
+.fab{
+  padding-right:2% ;
+  font-size: 30px;
+  color: rgb(253, 253, 253);
+}
+
+#footer h6{
+  font-size: 1x;
+}

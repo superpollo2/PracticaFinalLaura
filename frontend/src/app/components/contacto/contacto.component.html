@@ -1,0 +1,85 @@
+
+background-image=url('')
+<div id="header">
+    <img class="logo" src="../../../assets/img/logo.png" routerLink="/home">
+  </div>
+  
+  <nav>
+    <ul class="nav__links">
+      <li class="nom">
+        <p routerLink="/home">CocoBakery</p>
+      </li>
+      <li><a href="#" routerLink="/user/sign-in">Sign-in</a></li>
+      <li><a href="#" routerLink="/user/registro">Registrarse</a></li>
+  
+    </ul>
+  </nav>
+  
+  <div class="formbox " data-spy="scroll" data-target="#header" data-offset="0">
+      <h1>Contactenos</h1>
+      <form>
+        <div class="icon1">
+          <i class="material-icons">info</i>
+          <p>Correo</p>
+          <input type="email" name="email" placeholder="exemplo@algo.com" autocomplete="off">
+        </div>
+    
+        <div class="icon2">
+          <i class="material-icons">info</i>
+          <p>Nombre completo</p>
+          <input type="text" name="name" placeholder="Nombre"
+            autocomplete="off">
+        </div><br>
+        <div>
+            <p>Escriba aqui sus inquietudes</p>
+            <textarea rows="8" cols="90" > 
+               
+            </textarea>
+        </div><br>
+        
+        <input type="submit"  value="enviar">
+      </form>
+    </div>
+
+
+
+
+
+
+<div class="fixed-bottom">
+    <div id="footer">
+      <div class="row">
+        <div class="col md-6">
+          <div class="container" id="conacto">
+            <br><br>
+            <h6>Tel: 52462456 <i class="material-icons left">call</i></h6>
+            <h6>Whatsapp: 31036564589 <i class="material-icons left">textsms</i></h6>
+            <h6>Direccion: Cll 56 #45-03 <i class="material-icons left">store</i></h6>
+            <h6>Mail: cocobakery@gmail.com <i class="material-icons left">mail_outline</i></h6>
+            <h6>Fax: 52462456320 ext 2</h6><br>
+          </div>
+        </div>
+        <div class="col md-6">
+          <div class="container">
+            <h5>Acerca de cocobakery</h5>
+            <p>COCOBAKERY es una reposteria con 10 años de esperiencia en la elaboración de pasteles para
+              ocaciones especiales,atenta siempre a los requerimientos de los clientes y habil para cumplir todo lo que
+              se imagine en un pastel.
+            </p><br>
+            <h6>©2019 Copyright esta pagina esta protegida por derechos de autor</h6>
+          </div>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <div class="container" id="follow">
+            <h5>Follow us</h5>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook "></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-vk"></i><br><br>
+            <input type="submit" value="contactenos" routerLink="/contactoform">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
